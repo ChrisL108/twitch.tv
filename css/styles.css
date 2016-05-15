@@ -17,21 +17,13 @@ body {
   height: 100%;
 }
 header {
-  position:relative;
-  padding:0;
-  margin-bottom:30px;
-  height:100px;
-}
-#title h2{
   color:white;
-	text-align: left;
-  padding:10px;
-  font-size: 4rem ;
+  text-align: left;
+  padding:5px;
+  font-size: 35px ;
   text-align: left;
   background:dimgray;
 }
-
-
 #list-wrapper {
   width:100%;
   clear:both;
@@ -47,6 +39,13 @@ li {
   padding-bottom:40px;
   list-style:none;
   color:black;
+}
+a {
+  color: navy;
+}
+a:hover {
+  color:white;
+  text-decoration: none;
 }
 .offline {
   opacity: 0.8;
