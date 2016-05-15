@@ -1,9 +1,13 @@
 body {
   background-color:#222;
 }
-#status {
-  float:right;
-  text-align: right;
+#filter {
+    float:right;
+}
+#filter span {
+  padding:5px;
+  color: navy;
+  font-size: 20px;
 }
 #wrapper {
   background-color:gray;
@@ -17,31 +21,23 @@ header {
   padding:0;
   margin-bottom:30px;
   height:100px;
-  background:dimgray;
-  clear:both;
 }
 #title h2{
   color:white;
 	text-align: left;
-  padding:25px;
+  padding:10px;
   font-size: 4rem ;
-}
-#filter {
-  float:right;
-}
-#filter span {
-  padding:5px;
-  color: green;
+  text-align: left;
+  background:dimgray;
 }
 
+
 #list-wrapper {
-  position:relative;
   width:100%;
   clear:both;
-  color:darkorange;
+  color:black;
 }
 .user-logos {
-	position: relative;
 	width: 80px;
   float:left;
   clear:left;
@@ -50,4 +46,8 @@ header {
 li {
   padding-bottom:40px;
   list-style:none;
+  color:black;
+}
+.offline {
+  opacity: 0.8;
 }
