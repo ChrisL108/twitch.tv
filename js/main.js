@@ -1,6 +1,6 @@
 let streamers = ["freecodecamp", "storbeck", "terakilobyte",
  "habathcx","RobotCaleb","thomasballinger","noobs2ninjas","beohoff",
- "ESL_SC2", "OgamingSC2", "cretetion"]
+ "ESL_SC2", "OgamingSC2", "cretetion"];
 
 streamers.forEach(function(streamer) {
 	$.getJSON(makeURL('users', streamer), function(data) {
@@ -12,22 +12,24 @@ streamers.forEach(function(streamer) {
 			let userBio = data.bio;
 			
 			if (streamData.stream !== null) {
-				var streaming = true,
+				var streaming = "online",
 					streamInfo =  streamData.stream.game +
-				"---" + streamData.stream.channel.status;
+				        "---" + streamData.stream.channel.status;
 			} else {
-				var streaming = false,
+				var streaming = "offline",
 					streamInfo = "Offline";
 			}
-
 			createUser(userName, streamInfo, userLogo, streaming);
 		});
 	});
 	
 });
 
+//  createUser() - Add 'li' items 
+//  and add classes for filtering
 function createUser(name, info, logo, streaming) {
-	let newListItem = "<li class='stream-item'>" +
+  
+	let newListItem = "<li class='"+ streaming + "'>" +
 					  "<img src ='"+ logo +"' class='user-logos'> " +
 					  "<h4><a href='https://www.twitch.tv/" + name + "'>" +
 					  name + "</a></h4>" +
@@ -41,5 +43,22 @@ function makeURL(type, name) {
   		 type + '/' + name + '?callback=?';
 }
 
+// Filter Buttons ( Event Handler )
 
+$("#filter").on("click", "button", function() {
+  // ALL
+  if ($(this).html() === "All") {
+    $(".offline, .online").show();
+  }
+  //ONLINE
+  else if ($(this).html() === "Online") {
+    $(".offline").hide();
+    $(".online").show();
+  } 
+  //OFFLINE
+  else {  
+    $(".online").hide();
+    $(".offline").show();
+  }
+});
 

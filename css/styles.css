@@ -1,13 +1,9 @@
 body {
   background-color:#222;
 }
-#filter {
-    float:right;
-}
-#filter span {
-  padding:5px;
-  color: navy;
-  font-size: 20px;
+#status {
+  float:right;
+  text-align: right;
 }
 #wrapper {
   background-color:gray;
@@ -17,20 +13,31 @@ body {
   height: 100%;
 }
 header {
+  position:relative;
+  padding:0;
+  margin-bottom:30px;
+  height:100px;
+  background:dimgray;
+  clear:both;
+}
+#title h2{
   color:white;
   text-align: left;
-  padding:5px;
-  font-size: 35px ;
-  text-align: left;
-  background:dimgray;
+  padding:25px;
+  font-size: 4rem ;
+}
+#filter {
+  float:right;
 }
 #list-wrapper {
+  position:relative;
   width:100%;
   clear:both;
-  color:black;
+  color:white;
 }
 .user-logos {
-	width: 80px;
+  position: relative;
+  width: 80px;
   float:left;
   clear:left;
   padding-right:20px;
@@ -38,15 +45,10 @@ header {
 li {
   padding-bottom:40px;
   list-style:none;
-  color:black;
 }
 a {
   color: navy;
 }
 a:hover {
-  color:white;
-  text-decoration: none;
-}
-.offline {
-  opacity: 0.8;
+  text-decoration:none;
 }
